@@ -1,1 +1,1 @@
-nim c --hints:off --warnings:off --app:console --opt:size -r "main.nim"
+nim c --hints:off --warnings:off --app:console --opt:size --outdir:"./" -o:"Rogue.exe" -r "./src/main.nim"
