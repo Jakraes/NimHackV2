@@ -14,7 +14,7 @@ type
 method get_tiles_at*(map: Map, x, y: int): seq[Tile] {.base.} = 
     var tiles: seq[Tile]
     for t in map.tiles:
-        if t.get_x == x and t.get_y == y:
+        if t.x == x and t.y == y:
             tiles.add(t)
     return tiles
 

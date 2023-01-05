@@ -15,9 +15,9 @@ proc init*() =
     tb = newTerminalBuffer(terminalWidth(), terminalHeight())
 
 proc put_tile*(t: Tile) =
-    tb.setBackgroundColor(t.get_bColor)
-    tb.setForegroundColor(t.get_fColor, bright = t.is_bright)
-    tb.write(t.get_x, t.get_y, t.get_char)
+    tb.setBackgroundColor(t.bColor)
+    tb.setForegroundColor(t.fColor, bright = t.bright)
+    tb.write(t.x, t.y, t.c)
 
 proc display*() =
     tb.display()

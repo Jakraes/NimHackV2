@@ -1,13 +1,13 @@
 import engine, map, std/[random, os], illwill, entity
 
 proc main() =
-    init()
-
     var 
         world = generate_map()
         turns = 0
-
+        
     world.add_tile(new_player(15, 17))
+
+    init()
 
     for t in world.tiles:
         put_tile(t)
@@ -26,5 +26,5 @@ proc main() =
 
         display()
         sleep(1)
-
+    
 main()
